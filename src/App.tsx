@@ -1,11 +1,32 @@
 import './App.css';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
+import { fetchConvert, fetchCurrencies } from './api/currency';
 import logo from './logo.svg';
 
 function App() {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const a = async () => {
+      const test = await fetchCurrencies();
+      console.log(test);
+    };
+    a();
+  }, []);
+
+  useEffect(() => {
+    const a = async () => {
+      const test = await fetchConvert({
+        from: 'USD',
+        to: 'EUR',
+        amount: '104',
+      });
+      console.log(test);
+    };
+    a();
+  }, []);
 
   return (
     <div className="App">
