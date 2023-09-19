@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import { handleResponse } from '../lib';
 import { ApiResponse } from '../types';
-import { ConverteParams, ConverteResult, Currencies } from './types';
+import { ConverteParams, ConverteResult, CurrenciesWithDescriptions } from './types';
 
 const currencyInstance = axios.create({
   baseURL: 'https://currency-converter-pro1.p.rapidapi.com/',
@@ -14,7 +14,8 @@ const currencyInstance = axios.create({
 
 export const fetchCurrencies = async () =>
   handleResponse(
-    (await currencyInstance.get<ApiResponse<Currencies>>('currencies')).data,
+    (await currencyInstance.get<ApiResponse<CurrenciesWithDescriptions>>('currencies'))
+      .data,
   );
 
 export const fetchConvert = async (convertParams: ConverteParams) =>
