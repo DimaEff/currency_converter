@@ -28,6 +28,7 @@ export const CurrencyInput: FC<CurrencyInputProps & TextFieldProps> = ({
         onValueChange={(v) => onChangeAmount?.(v ?? '0')}
         allowNegativeValue={false}
         readOnly={readOnly}
+        decimalScale={2}
       />
       <CurrencySelect {...currencySelectProps} />
     </Stack>
