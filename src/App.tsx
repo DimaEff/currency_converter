@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 
-import { ConverteCurrencyForm } from './comopnents/converteCurrencyForm/converteCurrencyForm';
+import { ConverteCurrencyForm } from './comopnents/converteCurrencyForm';
 
 function App() {
   return (

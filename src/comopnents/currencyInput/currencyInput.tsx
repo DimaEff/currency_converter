@@ -1,12 +1,8 @@
-import { Stack, TextField, TextFieldProps } from '@mui/material';
-import { FC, useState } from 'react';
+import { Stack, TextFieldProps } from '@mui/material';
+import { FC } from 'react';
 import MCurrencyInput from 'react-currency-input-field';
 
-import { Amount } from '../../api/currency/types';
 import { CurrencySelect, CurrencySelectProps } from '../currencySelect';
-
-// const NUMERIC_PATTERN = /^[0-9]*$/;
-// const NUMERIC_PATTERN = /([0-9\,\.]+)/;
 
 interface CurrencyInputProps {
   amountValue: string | undefined;
