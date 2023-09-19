@@ -14,7 +14,7 @@ import { Currency } from '../../api/currency/types';
 
 interface _CurrencySelectProps {
   currencyValue: Currency | null;
-  onChangeCurrency: (currency: Currency | null) => void;
+  onChangeCurrency?: (currency: Currency | null) => void;
 }
 type OptionalAutocompleteProps = Omit<
   AutocompleteProps<Currency, undefined, boolean, undefined>,
@@ -47,7 +47,7 @@ export const CurrencySelect: FC<CurrencySelectProps & OptionalAutocompleteProps>
     <Autocomplete<Currency, undefined, boolean, undefined>
       {...props}
       value={value}
-      onChange={(_, v) => onChange(v)}
+      onChange={(_, v) => onChange?.(v)}
       options={currenciesList ?? []}
       disableClearable
       renderInput={(params) => (

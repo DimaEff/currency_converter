@@ -17,8 +17,10 @@
     "@mui/material": "^5.14.10",
     "axios": "^1.5.0",
     "react": "^18.2.0",
+    "react-currency-input-field": "^3.6.11",
     "react-dom": "^18.2.0",
-    "react-query": "^3.39.3"
+    "react-query": "^3.39.3",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@types/money": "^0.2.0",
